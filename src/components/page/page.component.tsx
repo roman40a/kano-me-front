@@ -6,7 +6,7 @@ export class Page extends React.PureComponent {
     render() {
         return (
             <div className={css.container}>
-                <Page />
+                page
             </div>
         );
     }
