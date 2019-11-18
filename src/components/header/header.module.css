@@ -1,0 +1,104 @@
+.container {
+    background-color: #ffffff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.15);
+    height: 100%;
+}
+
+.content {
+    height: 100%;
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 1400px;
+    padding: 0 16px;
+    position: relative;
+    transition: .1s linear;
+}
+
+.logoContainer {
+    min-width: 96px;
+    max-width: 96px;
+    height: 100%;
+}
+
+.logoContainer:visited {
+    color: #807fe2;
+}
+
+.logoContainer:focus {
+    box-shadow: 0 0 0 0.1rem rgba(87,85,217,.2);
+}
+
+
+@media (min-width: 981px) {
+    .main {
+        align-items: center;
+        display: flex;
+        flex: 4 0 auto;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding-left: 70px;
+    }
+
+    .mainContainer {
+        display: flex;
+        width: 100%;
+    }
+
+    .primary {
+        flex: 4 0 auto;
+        justify-content: flex-start;
+    }
+
+    .secondary {
+        flex: 1 0 auto;
+        justify-content: flex-end;
+    }
+
+    .primary, .secondary {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        font-size: 16px;
+        transition: .1s linear;
+    }
+
+    .divideLine {
+        height: 32px;
+        width: 2px;
+        background-color: #e9ebec;
+        margin-right: 16px;
+    }
+}
+
+.auxiliary {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+    justify-content: flex-end;
+}
+
+.cartLink {
+    color: #394148;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex: none;
+}
+
+.cartContainer {
+    background-color: #394148;
+    border-radius: 100%;
+    display: inline-block;
+    height: 2.2rem;
+    width: 2.2rem;
+    min-width: 2.2rem;
+}
