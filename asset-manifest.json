@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/kano-me-front/static/css/main.fc173d31.chunk.css",
+    "main.css": "/kano-me-front/static/css/main.d5cc246c.chunk.css",
     "main.js": "/kano-me-front/static/js/main.6f9a002a.chunk.js",
     "main.js.map": "/kano-me-front/static/js/main.6f9a002a.chunk.js.map",
     "runtime-main.js": "/kano-me-front/static/js/runtime-main.860ce2c1.js",
@@ -8,10 +8,9 @@
     "static/js/2.bf5596f2.chunk.js": "/kano-me-front/static/js/2.bf5596f2.chunk.js",
     "static/js/2.bf5596f2.chunk.js.map": "/kano-me-front/static/js/2.bf5596f2.chunk.js.map",
     "index.html": "/kano-me-front/index.html",
-    "precache-manifest.759a209d1001db079e861ffe12d0be3b.js": "/kano-me-front/precache-manifest.759a209d1001db079e861ffe12d0be3b.js",
+    "precache-manifest.0fdf5b53ed5e3af44e93e6d6a28d0d23.js": "/kano-me-front/precache-manifest.0fdf5b53ed5e3af44e93e6d6a28d0d23.js",
     "service-worker.js": "/kano-me-front/service-worker.js",
-    "static/css/main.fc173d31.chunk.css.map": "/kano-me-front/static/css/main.fc173d31.chunk.css.map",
-    "static/media/app.module.css": "/kano-me-front/static/media/bariol_thin_italic-webfont.d41d8cd9.ttf",
+    "static/css/main.d5cc246c.chunk.css.map": "/kano-me-front/static/css/main.d5cc246c.chunk.css.map",
     "static/media/logo.module.css": "/kano-me-front/static/media/logo.da81ee6a.svg"
   }
 }
