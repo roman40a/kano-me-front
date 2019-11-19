@@ -6,6 +6,7 @@ import { Logo } from '../logo/logo.component';
 import { Cart } from '../cart/cart.component';
 import { PointerIcon } from '../icons/pointer/pointer';
 import { Item } from './sub-components/item/item.component';
+import { ProductsItem } from './sub-components/products-item/products-item.component';
 
 export type Props = {
     data?: any;
@@ -26,16 +27,8 @@ export class Header extends React.PureComponent<Props, State> {
         this.setState(state => ({ isProjectsOpened: !state.isProjectsOpened }));
     };
 
-    handleProductEnter = () => {
-        this.setState({isProductHovered: true});
-    };
-
-    handleProductLeave = () => {
-        this.setState({isProductHovered: false});
-    };
-
     render() {
-        const {isProjectsOpened, isProductHovered} = this.state;
+        const {isProjectsOpened} = this.state;
 
         const showCaseClassName = cn(css.showCase, {
             [css.showCase__open]: isProjectsOpened,
@@ -50,16 +43,11 @@ export class Header extends React.PureComponent<Props, State> {
                     <div className={css.main}>
                         <div className={css.mainContainer}>
                             <div className={css.primary}>
-                                <div className={css.itemContainer}>
-                                    <a className={cn(css.item, css.item__product)}
-                                       onClick={this.handleProductOpen}
-                                       onMouseEnter={this.handleProductEnter}
-                                       onMouseLeave={this.handleProductLeave}
-                                    >
-                                        <span className={css.label}>Products</span>
-                                        <PointerIcon active={isProjectsOpened} hovered={isProductHovered} />
-                                    </a>
-                                </div>
+                                <ProductsItem
+                                    label={'Products'}
+                                    isActive={isProjectsOpened}
+                                    onClick={this.handleProductOpen}
+                                />
                                 <Item label={'Educators'} href={'/'} />
                                 <Item label={'DownLoads'} href={'/'} />
                             </div>
