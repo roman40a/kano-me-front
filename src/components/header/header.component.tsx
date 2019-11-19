@@ -1,7 +1,7 @@
 import React from 'react';
 import cn from 'classnames';
-import { Logo } from '../logo/logo.component';
-import { Cart } from '../cart/cart.component';
+import { Logo } from './sub-components/logo/logo.component';
+import { Cart } from './cart/cart.component';
 import { Item } from './sub-components/item/item.component';
 import { ProductsItem } from './sub-components/products-item/products-item.component';
 import { HelpItem } from './sub-components/help-item/help-item.component';
@@ -119,7 +119,7 @@ export class Header extends React.PureComponent<Props, State> {
                             <div className={css.divideLine} />
                             <div className={css.cartLink}>
                                 <div className={css.cartContainer}>
-                                    <Cart />
+                                    <Cart count={12} />
                                 </div>
                             </div>
                         </div>

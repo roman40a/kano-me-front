@@ -2,10 +2,16 @@ import React from 'react';
 
 import css from './cart.module.css';
 
-export class Cart extends React.PureComponent {
+export type Props = {
+    count: number;
+};
+
+export class Cart extends React.PureComponent<Props> {
     render() {
+        const { count } = this.props;
         return (
             <div className={css.container}>
+                {count > 0 && <div className={css.count}>{count}</div>}
                 <svg
                     style={{
                         height: '1.4rem',
