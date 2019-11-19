@@ -1,0 +1,29 @@
+.container {
+    box-shadow: none;
+    outline: none;
+    margin: 0 20px;
+    display: block;
+}
+
+.image {
+    max-width: 100%;
+    display: block;
+    border-radius: 6px;
+}
+
+.info {
+    margin-top: 16px;
+}
+
+.title {
+    font-weight: bold;
+    color: #292f35;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.price {
+    color: #9fa4a8;
+    font-size: .875rem;
+    line-height: 1.125rem;
+}

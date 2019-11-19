@@ -13,12 +13,16 @@ export class ProductsItem extends React.PureComponent<Props> {
     render() {
         const {label, isActive, onClick} = this.props;
 
+        const containerClassName = cn(css.container, {
+            [css.container__active]: isActive,
+        });
+
         const iconContainerClassName = cn(css.iconContainer, {
             [css.iconContainer__active]: isActive,
         });
 
         return (
-            <a className={css.container} onClick={onClick}>
+            <a className={containerClassName} onClick={onClick}>
                 <span className={css.content}>{label}</span>
                 <svg
                     className={iconContainerClassName}

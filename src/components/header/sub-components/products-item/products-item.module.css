@@ -12,7 +12,11 @@
     margin-right: 30px;
 }
 
-.container:hover .icon {
+.container:hover, .container__active {
+    color: #141414;
+}
+
+.container:hover .icon, .container__active .icon {
     fill: #ff6900;
 }
 
@@ -36,8 +40,4 @@
 
 .icon {
     fill: #8e9397;
-}
-
-.container:hover {
-    color: #141414;
 }

@@ -8,6 +8,7 @@ import { Item } from './sub-components/item/item.component';
 import { ProductsItem } from './sub-components/products-item/products-item.component';
 import { HelpItem } from './sub-components/help-item/help-item.component';
 import { ShowCaseClose } from './sub-components/show-case-close/show-case-close';
+import { Product } from './sub-components/product/product.component';
 
 export type Props = {
     data?: any;
@@ -34,6 +35,24 @@ const HELP_ITEMS = [
     {
         label: 'Career',
         href: '/',
+    },
+];
+
+const PRODUCTS = [
+    {
+        title: 'Star Wars The Force™ Coding Kit',
+        price: '$79.99',
+        imgSrc: 'https://kanome-cms-media-production.kano.me/media/products/SW-nav.jpg?v=14bf7d202899e6d796d6f8de11c90b1135e2853a',
+    },
+    {
+        title: 'Disney Frozen 2 Coding Kit',
+        price: '$79.99',
+        imgSrc: 'https://kanome-cms-media-production.kano.me/media/products/frozen-menu-img.jpeg?v=14bf7d202899e6d796d6f8de11c90b1135e2853a',
+    },
+    {
+        title: 'Harry Potter Kano Coding Kit',
+        price: '$99.99',
+        imgSrc: 'https://kanome-cms-media-production.kano.me/media/products/shop-harry-potter-small2x_3.jpg?v=14bf7d202899e6d796d6f8de11c90b1135e2853a',
     },
 ];
 
@@ -81,7 +100,7 @@ export class Header extends React.PureComponent<Props, State> {
                             </div>
                             <div className={css.secondary}>
                                 <Item label={'Blog'} href={'/'} />
-                                <Item label={'Story Locator'} href={'/'} />
+                                <Item label={'Store Locator'} href={'/'} />
                                 <HelpItem label={'Help'} isActive={isHelpOpened} items={HELP_ITEMS} onClick={this.handleHelpOpen} />
                             </div>
                         </div>
@@ -101,7 +120,10 @@ export class Header extends React.PureComponent<Props, State> {
                             <ShowCaseClose onClose={this.handleProductClose} />
                         </div>
                         <div className={css.productList}>
-
+                            {PRODUCTS.map(product => <Product title={product.title} price={product.price} imgSrc={product.imgSrc} href={'/'} />)}
+                        </div>
+                        <div className={css.viewAllButtonContainer}>
+                            <a className={css.viewAllButton}>view all products</a>
                         </div>
                     </div>
                 </div>
