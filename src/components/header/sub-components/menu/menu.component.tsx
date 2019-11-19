@@ -4,6 +4,7 @@ import cn from 'classnames';
 import css from './menu.module.css';
 import { CloseButton } from './sub-components/close-buttton/close-button';
 import { MenuItem } from './sub-components/menu-item/menu-item.component';
+import { HelpMenuItem } from './sub-components/help-menu-item/help-menu-item.component';
 
 type Props = {
     isOpened: boolean;
@@ -33,6 +34,7 @@ export class Menu extends React.PureComponent<Props> {
                         <MenuItem label={'Downloads'} href={'/'} />
                         <MenuItem label={'Store Locator'} href={'/'} />
                         <MenuItem label={'Blog'} href={'/'} />
+                        <HelpMenuItem label={'Help'} />
                     </div>
                 </div>
             </div>

@@ -7,19 +7,51 @@
     align-items: center;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     cursor: pointer;
 
     color: #8e9397;
     font-weight: 700;
     text-decoration: none;
+
+    margin-right: 30px;
 }
 
 .container:hover, .container__active {
     color: #141414;
 }
 
+.container:hover .icon, .container__active .icon {
+    fill: #ff6900;
+}
+
 .container:visited {
     box-shadow: none;
     outline: none;
 }
+
+.content {
+    padding-right: 8px;
+}
+
+.iconContainer {
+    width: 15px;
+    transform: rotate(90deg);
+}
+
+.iconContainer__active {
+    transform: rotate(-90deg);
+}
+
+.icon {
+    fill: #8e9397;
+}
+
+.subItems {
+    display: none;
+}
+
+.subItems__opened {
+    display: block;
+}
+

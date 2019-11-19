@@ -43,5 +43,6 @@
 }
 
 .itemList {
-    padding: 0 16px 40px;
+    margin: 0 16px 40px;
+    border-bottom: 1px solid #e9ebec;
 }

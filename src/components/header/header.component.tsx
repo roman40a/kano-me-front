@@ -22,7 +22,7 @@ type State = {
     isMenuOpened: boolean;
 };
 
-const HELP_ITEMS = [
+export const HELP_ITEMS = [
     {
         label: 'Contact Us',
         href: '/',
