@@ -10,9 +10,7 @@ export class Page extends React.PureComponent {
                 <div className={css.headerContainer}>
                     <Header />
                 </div>
-                <div className={css.content}>
-                    page
-                </div>
+                <div className={css.content}>page</div>
             </div>
         );
     }

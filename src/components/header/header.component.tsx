@@ -1,7 +1,5 @@
 import React from 'react';
 import cn from 'classnames';
-
-import css from './header.module.css';
 import { Logo } from '../logo/logo.component';
 import { Cart } from '../cart/cart.component';
 import { Item } from './sub-components/item/item.component';
@@ -10,14 +8,16 @@ import { HelpItem } from './sub-components/help-item/help-item.component';
 import { ShowCaseClose } from './sub-components/show-case-close/show-case-close';
 import { Product } from './sub-components/product/product.component';
 
+import css from './header.module.css';
+
 export type Props = {
     data?: any;
-}
+};
 
 type State = {
     isProjectsOpened: boolean;
     isHelpOpened: boolean;
-}
+};
 
 const HELP_ITEMS = [
     {
@@ -42,17 +42,20 @@ const PRODUCTS = [
     {
         title: 'Star Wars The Force™ Coding Kit',
         price: '$79.99',
-        imgSrc: 'https://kanome-cms-media-production.kano.me/media/products/SW-nav.jpg?v=14bf7d202899e6d796d6f8de11c90b1135e2853a',
+        imgSrc:
+            'https://kanome-cms-media-production.kano.me/media/products/SW-nav.jpg?v=14bf7d202899e6d796d6f8de11c90b1135e2853a',
     },
     {
         title: 'Disney Frozen 2 Coding Kit',
         price: '$79.99',
-        imgSrc: 'https://kanome-cms-media-production.kano.me/media/products/frozen-menu-img.jpeg?v=14bf7d202899e6d796d6f8de11c90b1135e2853a',
+        imgSrc:
+            'https://kanome-cms-media-production.kano.me/media/products/frozen-menu-img.jpeg?v=14bf7d202899e6d796d6f8de11c90b1135e2853a',
     },
     {
         title: 'Harry Potter Kano Coding Kit',
         price: '$99.99',
-        imgSrc: 'https://kanome-cms-media-production.kano.me/media/products/shop-harry-potter-small2x_3.jpg?v=14bf7d202899e6d796d6f8de11c90b1135e2853a',
+        imgSrc:
+            'https://kanome-cms-media-production.kano.me/media/products/shop-harry-potter-small2x_3.jpg?v=14bf7d202899e6d796d6f8de11c90b1135e2853a',
     },
 ];
 
@@ -67,7 +70,7 @@ export class Header extends React.PureComponent<Props, State> {
     };
 
     handleProductClose = () => {
-        this.setState({isProjectsOpened: false});
+        this.setState({ isProjectsOpened: false });
     };
 
     handleHelpOpen = () => {
@@ -75,7 +78,7 @@ export class Header extends React.PureComponent<Props, State> {
     };
 
     render() {
-        const {isProjectsOpened, isHelpOpened} = this.state;
+        const { isProjectsOpened, isHelpOpened } = this.state;
 
         const showCaseClassName = cn(css.showCase, {
             [css.showCase__open]: isProjectsOpened,
@@ -84,7 +87,10 @@ export class Header extends React.PureComponent<Props, State> {
         return (
             <div className={css.container}>
                 <div className={css.content}>
-                    <a href={'https://kano.me/row'} className={css.logoContainer}>
+                    <a
+                        href={'https://kano.me/row'}
+                        className={css.logoContainer}
+                    >
                         <Logo />
                     </a>
                     <div className={css.main}>
@@ -101,7 +107,12 @@ export class Header extends React.PureComponent<Props, State> {
                             <div className={css.secondary}>
                                 <Item label={'Blog'} href={'/'} />
                                 <Item label={'Store Locator'} href={'/'} />
-                                <HelpItem label={'Help'} isActive={isHelpOpened} items={HELP_ITEMS} onClick={this.handleHelpOpen} />
+                                <HelpItem
+                                    label={'Help'}
+                                    isActive={isHelpOpened}
+                                    items={HELP_ITEMS}
+                                    onClick={this.handleHelpOpen}
+                                />
                             </div>
                         </div>
                         <div className={css.auxiliary}>
@@ -120,10 +131,19 @@ export class Header extends React.PureComponent<Props, State> {
                             <ShowCaseClose onClose={this.handleProductClose} />
                         </div>
                         <div className={css.productList}>
-                            {PRODUCTS.map(product => <Product title={product.title} price={product.price} imgSrc={product.imgSrc} href={'/'} />)}
+                            {PRODUCTS.map(product => (
+                                <Product
+                                    title={product.title}
+                                    price={product.price}
+                                    imgSrc={product.imgSrc}
+                                    href={'/'}
+                                />
+                            ))}
                         </div>
                         <div className={css.viewAllButtonContainer}>
-                            <a className={css.viewAllButton}>view all products</a>
+                            <a href={'/'} className={css.viewAllButton}>
+                                view all products
+                            </a>
                         </div>
                     </div>
                 </div>

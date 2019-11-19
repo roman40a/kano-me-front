@@ -8,18 +8,18 @@ import css from './help-item.module.css';
 type ItemContent = {
     label: string;
     href: string;
-}
+};
 
 export type Props = {
     label: string;
     isActive: boolean;
     items: ItemContent[];
     onClick(): void;
-}
+};
 
 export class HelpItem extends React.PureComponent<Props> {
     render() {
-        const {label, isActive, onClick, items} = this.props;
+        const { label, isActive, onClick, items } = this.props;
 
         const contentClassName = cn(css.content, {
             [css.content__opened]: isActive,
@@ -27,7 +27,11 @@ export class HelpItem extends React.PureComponent<Props> {
 
         return (
             <div className={css.container}>
-                <ProductsItem label={label} isActive={isActive} onClick={onClick} />
+                <ProductsItem
+                    label={label}
+                    isActive={isActive}
+                    onClick={onClick}
+                />
                 <div className={contentClassName}>
                     {items.map(item => (
                         <div className={css.itemContainer}>

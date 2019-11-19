@@ -6,7 +6,7 @@ import css from './pointer.module.css';
 export type Props = {
     active: boolean;
     hovered: boolean;
-}
+};
 
 export class PointerIcon extends React.PureComponent<Props> {
     render() {

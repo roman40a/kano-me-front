@@ -7,11 +7,11 @@ export type Props = {
     label: string;
     isActive: boolean;
     onClick(): void;
-}
+};
 
 export class ProductsItem extends React.PureComponent<Props> {
     render() {
-        const {label, isActive, onClick} = this.props;
+        const { label, isActive, onClick } = this.props;
 
         const containerClassName = cn(css.container, {
             [css.container__active]: isActive,
@@ -22,7 +22,7 @@ export class ProductsItem extends React.PureComponent<Props> {
         });
 
         return (
-            <a className={containerClassName} onClick={onClick}>
+            <div className={containerClassName} onClick={onClick}>
                 <span className={css.content}>{label}</span>
                 <svg
                     className={iconContainerClassName}
@@ -36,7 +36,7 @@ export class ProductsItem extends React.PureComponent<Props> {
                         d="M4.84,7.1s0,4.76,1.75,3.42A10.32,10.32,0,0,0,9.08,7.58a1,1,0,0,0,0-1A10.32,10.32,0,0,0,6.59,3.68C4.84,2.34,4.84,7.1,4.84,7.1Z"
                     />
                 </svg>
-            </a>
+            </div>
         );
     }
 }
