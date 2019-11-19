@@ -1,0 +1,14 @@
+.container {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    flex: none;
+    height: 12px;
+    width: 12px;
+    cursor: pointer;
+}

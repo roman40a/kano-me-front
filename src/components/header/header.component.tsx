@@ -82,12 +82,12 @@ export class Header extends React.PureComponent<Props, State> {
     };
 
     handleMenuOpen = () => {
-        this.setState({isMenuOpened: true});
-    }
+        this.setState({ isMenuOpened: true });
+    };
 
     handleMenuClose = () => {
-        this.setState({isMenuOpened: false});
-    }
+        this.setState({ isMenuOpened: false });
+    };
 
     render() {
         const { isProjectsOpened, isHelpOpened, isMenuOpened } = this.state;

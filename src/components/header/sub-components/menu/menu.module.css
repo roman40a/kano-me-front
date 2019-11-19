@@ -1,5 +1,5 @@
 .container {
-    display: none;
+    left: -100%;
 }
 
 .container__opened {
@@ -15,7 +15,6 @@
 }
 
 .content {
-    padding-top: 64px;
     background-color: #fff;
     left: 0;
     opacity: 0;
@@ -33,4 +32,16 @@
 .content__opened {
     opacity: 1;
     transform: translateX(0);
+}
+
+.closeButtonWrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+    height: 64px;
+}
+
+.itemList {
+    padding: 0 16px 40px;
 }

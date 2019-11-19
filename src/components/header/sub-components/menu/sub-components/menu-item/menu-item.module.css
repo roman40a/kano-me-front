@@ -1,0 +1,21 @@
+.container {
+    border-top: 1px solid #e9ebec;
+    padding: 16px 8px 16px 40px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    cursor: pointer;
+
+    color: #8e9397;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.container:visited {
+    box-shadow: none;
+    outline: none;
+}
