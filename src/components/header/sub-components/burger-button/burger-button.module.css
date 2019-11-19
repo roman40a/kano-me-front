@@ -1,0 +1,30 @@
+.container {
+    display: none;
+}
+
+@media (max-width: 980px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        appearance: none;
+        background-color: transparent;
+        border: 0;
+        cursor: pointer;
+        height: 100%;
+        left: 0;
+        padding: 0;
+        position: absolute;
+        top: 0;
+        width: 50px;
+    }
+
+    .icon {
+        height: auto;
+        margin: auto;
+        max-width: 32px;
+        width: 100%;
+    }
+}
+

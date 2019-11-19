@@ -9,6 +9,7 @@ import { ShowCaseClose } from './sub-components/show-case-close/show-case-close'
 import { Product } from './sub-components/product/product.component';
 
 import css from './header.module.css';
+import { BurgerButton } from './sub-components/burger-button/burger-button.component';
 
 export type Props = {
     data?: any;
@@ -87,6 +88,7 @@ export class Header extends React.PureComponent<Props, State> {
         return (
             <div className={css.container}>
                 <div className={css.content}>
+                    <BurgerButton onClick={() => console.log('click')} />
                     <a
                         href={'https://kano.me/row'}
                         className={css.logoContainer}
