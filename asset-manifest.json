@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/kano-me-front/static/css/main.d5cc246c.chunk.css",
-    "main.js": "/kano-me-front/static/js/main.6f9a002a.chunk.js",
-    "main.js.map": "/kano-me-front/static/js/main.6f9a002a.chunk.js.map",
+    "main.css": "/kano-me-front/static/css/main.da059da2.chunk.css",
+    "main.js": "/kano-me-front/static/js/main.89bd5041.chunk.js",
+    "main.js.map": "/kano-me-front/static/js/main.89bd5041.chunk.js.map",
     "runtime-main.js": "/kano-me-front/static/js/runtime-main.860ce2c1.js",
     "runtime-main.js.map": "/kano-me-front/static/js/runtime-main.860ce2c1.js.map",
-    "static/js/2.bf5596f2.chunk.js": "/kano-me-front/static/js/2.bf5596f2.chunk.js",
-    "static/js/2.bf5596f2.chunk.js.map": "/kano-me-front/static/js/2.bf5596f2.chunk.js.map",
+    "static/js/2.0a9cc1c7.chunk.js": "/kano-me-front/static/js/2.0a9cc1c7.chunk.js",
+    "static/js/2.0a9cc1c7.chunk.js.map": "/kano-me-front/static/js/2.0a9cc1c7.chunk.js.map",
     "index.html": "/kano-me-front/index.html",
-    "precache-manifest.0fdf5b53ed5e3af44e93e6d6a28d0d23.js": "/kano-me-front/precache-manifest.0fdf5b53ed5e3af44e93e6d6a28d0d23.js",
+    "precache-manifest.d22e54b8a4ec634122df1885a03b331a.js": "/kano-me-front/precache-manifest.d22e54b8a4ec634122df1885a03b331a.js",
     "service-worker.js": "/kano-me-front/service-worker.js",
-    "static/css/main.d5cc246c.chunk.css.map": "/kano-me-front/static/css/main.d5cc246c.chunk.css.map",
+    "static/css/main.da059da2.chunk.css.map": "/kano-me-front/static/css/main.da059da2.chunk.css.map",
     "static/media/logo.module.css": "/kano-me-front/static/media/logo.da81ee6a.svg"
   }
 }
