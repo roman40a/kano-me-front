@@ -6,16 +6,17 @@ import css from './page.module.css';
 
 type Props = {
     headerData: HeaderData;
+    goods: number;
 };
 
 export class Page extends React.PureComponent<Props> {
     render() {
-        const { headerData } = this.props;
+        const { headerData, goods } = this.props;
 
         return (
             <div className={css.container}>
                 <div className={css.headerContainer}>
-                    <Header data={headerData} />
+                    <Header data={headerData} goods={goods} />
                 </div>
                 <div className={css.content}>page</div>
             </div>

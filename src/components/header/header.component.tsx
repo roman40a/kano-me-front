@@ -15,6 +15,7 @@ import css from './header.module.css';
 
 export type Props = {
     data: HeaderData;
+    goods: number;
 };
 
 type State = {
@@ -51,7 +52,7 @@ export class Header extends React.PureComponent<Props, State> {
     };
 
     render() {
-        const { data } = this.props;
+        const { data, goods } = this.props;
         const { items, products, help } = data;
         const { isProjectsOpened, isHelpOpened, isMenuOpened } = this.state;
 
@@ -120,7 +121,7 @@ export class Header extends React.PureComponent<Props, State> {
                             <div className={css.divideLine} />
                             <div className={css.cartLink}>
                                 <div className={css.cartContainer}>
-                                    <Cart count={12} />
+                                    <Cart count={goods} />
                                 </div>
                             </div>
                         </div>
@@ -137,7 +138,7 @@ export class Header extends React.PureComponent<Props, State> {
                                     title={product.title}
                                     price={product.price}
                                     imgSrc={product.imgSrc}
-                                    href={'/'}
+                                    href={product.href}
                                 />
                             ))}
                         </div>

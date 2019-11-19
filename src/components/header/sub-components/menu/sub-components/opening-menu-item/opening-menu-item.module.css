@@ -32,6 +32,7 @@
 
 .content {
     padding-right: 8px;
+    display: flex;
 }
 
 .iconContainer {

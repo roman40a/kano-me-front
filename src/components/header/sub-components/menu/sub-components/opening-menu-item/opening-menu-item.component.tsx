@@ -3,7 +3,7 @@ import cn from 'classnames';
 import { MenuItem } from '../menu-item/menu-item.component';
 import { Item } from '../../../../../page/page.model';
 
-import css from './helpmenu-item.module.css';
+import css from './opening-menu-item.module.css';
 
 export type Props = {
     label: string;
@@ -14,7 +14,7 @@ type State = {
     isActive: boolean;
 };
 
-export class HelpMenuItem extends React.PureComponent<Props, State> {
+export class OpeningMenuItem extends React.PureComponent<Props, State> {
     readonly state: State = {
         isActive: false,
     };
@@ -62,6 +62,7 @@ export class HelpMenuItem extends React.PureComponent<Props, State> {
                             additionalPadding={40}
                             label={item.label}
                             href={item.href}
+                            Icon={item.icon}
                         />
                     ))}
                 </div>

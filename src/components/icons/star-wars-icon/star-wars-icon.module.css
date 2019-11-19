@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+}
+
+.icon path {
+    fill: #8e9397;
+}
+
+.icon__active path {
+    fill: #ff6900;
+}
