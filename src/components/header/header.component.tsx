@@ -7,28 +7,52 @@ import { Cart } from '../cart/cart.component';
 import { PointerIcon } from '../icons/pointer/pointer';
 import { Item } from './sub-components/item/item.component';
 import { ProductsItem } from './sub-components/products-item/products-item.component';
+import { HelpItem } from './sub-components/help-item/help-item.component';
 
 export type Props = {
     data?: any;
 }
 
 type State = {
-    isProductHovered: boolean;
     isProjectsOpened: boolean;
+    isHelpOpened: boolean;
 }
+
+const HELP_ITEMS = [
+    {
+        label: 'Contact Us',
+        href: '/',
+    },
+    {
+        label: 'Help Center',
+        href: '/',
+    },
+    {
+        label: 'Community',
+        href: '/',
+    },
+    {
+        label: 'Career',
+        href: '/',
+    },
+];
 
 export class Header extends React.PureComponent<Props, State> {
     readonly state: State = {
-        isProductHovered: false,
         isProjectsOpened: false,
+        isHelpOpened: false,
     };
 
     handleProductOpen = () => {
         this.setState(state => ({ isProjectsOpened: !state.isProjectsOpened }));
     };
 
+    handleHelpOpen = () => {
+        this.setState(state => ({ isHelpOpened: !state.isHelpOpened }));
+    };
+
     render() {
-        const {isProjectsOpened} = this.state;
+        const {isProjectsOpened, isHelpOpened} = this.state;
 
         const showCaseClassName = cn(css.showCase, {
             [css.showCase__open]: isProjectsOpened,
@@ -54,6 +78,7 @@ export class Header extends React.PureComponent<Props, State> {
                             <div className={css.secondary}>
                                 <Item label={'Blog'} href={'/'} />
                                 <Item label={'Story Locator'} href={'/'} />
+                                <HelpItem label={'Help'} isActive={isHelpOpened} items={HELP_ITEMS} onClick={this.handleHelpOpen} />
                             </div>
                         </div>
                         <div className={css.auxiliary}>

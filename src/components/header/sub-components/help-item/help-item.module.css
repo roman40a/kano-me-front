@@ -1,0 +1,36 @@
+.container {
+    position: relative;
+}
+
+.content {
+    display: none;
+    position: absolute;
+    z-index: 0;
+    right: 30px;
+    top: calc(100% + 25px);
+    padding: 15px;
+
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.15);
+}
+
+.content__opened {
+    display: block;
+}
+
+.itemContainer {
+    white-space: nowrap;
+    margin-top: .4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemContainer > * {
+    margin: 0;
+}
+
+.itemContainer:nth-last-of-type(n + 2) {
+    padding-bottom: .8rem;
+}
