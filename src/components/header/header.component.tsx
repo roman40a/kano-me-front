@@ -7,13 +7,14 @@ import { ProductsItem } from './sub-components/products-item/products-item.compo
 import { HelpItem } from './sub-components/help-item/help-item.component';
 import { ShowCaseClose } from './sub-components/show-case-close/show-case-close';
 import { Product } from './sub-components/product/product.component';
-
-import css from './header.module.css';
 import { BurgerButton } from './sub-components/burger-button/burger-button.component';
 import { Menu } from './sub-components/menu/menu.component';
+import { HeaderData, Position } from '../page/page.model';
+
+import css from './header.module.css';
 
 export type Props = {
-    data?: any;
+    data: HeaderData;
 };
 
 type State = {
@@ -21,46 +22,6 @@ type State = {
     isHelpOpened: boolean;
     isMenuOpened: boolean;
 };
-
-export const HELP_ITEMS = [
-    {
-        label: 'Contact Us',
-        href: '/',
-    },
-    {
-        label: 'Help Center',
-        href: '/',
-    },
-    {
-        label: 'Community',
-        href: '/',
-    },
-    {
-        label: 'Career',
-        href: '/',
-    },
-];
-
-const PRODUCTS = [
-    {
-        title: 'Star Wars The Force™ Coding Kit',
-        price: '$79.99',
-        imgSrc:
-            'https://kanome-cms-media-production.kano.me/media/products/SW-nav.jpg?v=14bf7d202899e6d796d6f8de11c90b1135e2853a',
-    },
-    {
-        title: 'Disney Frozen 2 Coding Kit',
-        price: '$79.99',
-        imgSrc:
-            'https://kanome-cms-media-production.kano.me/media/products/frozen-menu-img.jpeg?v=14bf7d202899e6d796d6f8de11c90b1135e2853a',
-    },
-    {
-        title: 'Harry Potter Kano Coding Kit',
-        price: '$99.99',
-        imgSrc:
-            'https://kanome-cms-media-production.kano.me/media/products/shop-harry-potter-small2x_3.jpg?v=14bf7d202899e6d796d6f8de11c90b1135e2853a',
-    },
-];
 
 export class Header extends React.PureComponent<Props, State> {
     readonly state: State = {
@@ -90,6 +51,8 @@ export class Header extends React.PureComponent<Props, State> {
     };
 
     render() {
+        const { data } = this.props;
+        const { items, products, help } = data;
         const { isProjectsOpened, isHelpOpened, isMenuOpened } = this.state;
 
         const showCaseClassName = cn(css.showCase, {
@@ -98,7 +61,11 @@ export class Header extends React.PureComponent<Props, State> {
 
         return (
             <div className={css.container}>
-                <Menu isOpened={isMenuOpened} onClose={this.handleMenuClose} />
+                <Menu
+                    data={data}
+                    isOpened={isMenuOpened}
+                    onClose={this.handleMenuClose}
+                />
                 <div className={css.content}>
                     <BurgerButton onClick={this.handleMenuOpen} />
                     <div className={css.logoContainer}>
@@ -113,20 +80,38 @@ export class Header extends React.PureComponent<Props, State> {
                         <div className={css.mainContainer}>
                             <div className={css.primary}>
                                 <ProductsItem
-                                    label={'Products'}
+                                    label={products.label}
                                     isActive={isProjectsOpened}
                                     onClick={this.handleProductOpen}
                                 />
-                                <Item label={'Educators'} href={'/'} />
-                                <Item label={'DownLoads'} href={'/'} />
+                                {items
+                                    .filter(
+                                        item =>
+                                            item.position === Position.Primary
+                                    )
+                                    .map(item => (
+                                        <Item
+                                            label={item.label}
+                                            href={item.href}
+                                        />
+                                    ))}
                             </div>
                             <div className={css.secondary}>
-                                <Item label={'Blog'} href={'/'} />
-                                <Item label={'Store Locator'} href={'/'} />
+                                {items
+                                    .filter(
+                                        item =>
+                                            item.position === Position.Secondary
+                                    )
+                                    .map(item => (
+                                        <Item
+                                            label={item.label}
+                                            href={item.href}
+                                        />
+                                    ))}
                                 <HelpItem
-                                    label={'Help'}
+                                    label={help.label}
                                     isActive={isHelpOpened}
-                                    items={HELP_ITEMS}
+                                    items={help.items}
                                     onClick={this.handleHelpOpen}
                                 />
                             </div>
@@ -147,7 +132,7 @@ export class Header extends React.PureComponent<Props, State> {
                             <ShowCaseClose onClose={this.handleProductClose} />
                         </div>
                         <div className={css.productList}>
-                            {PRODUCTS.map(product => (
+                            {products.products.map(product => (
                                 <Product
                                     title={product.title}
                                     price={product.price}

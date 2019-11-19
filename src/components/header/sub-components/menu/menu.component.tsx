@@ -1,19 +1,23 @@
 import React from 'react';
 import cn from 'classnames';
-
-import css from './menu.module.css';
 import { CloseButton } from './sub-components/close-buttton/close-button';
 import { MenuItem } from './sub-components/menu-item/menu-item.component';
 import { HelpMenuItem } from './sub-components/help-menu-item/help-menu-item.component';
+import { HeaderData } from '../../../page/page.model';
+
+import css from './menu.module.css';
 
 type Props = {
+    data: HeaderData;
     isOpened: boolean;
     onClose(): void;
 };
 
 export class Menu extends React.PureComponent<Props> {
     render() {
-        const { isOpened, onClose } = this.props;
+        const { isOpened, onClose, data } = this.props;
+
+        const { products, help, items } = data;
 
         const containerClassName = cn(css.container, {
             [css.container__opened]: isOpened,
@@ -30,11 +34,10 @@ export class Menu extends React.PureComponent<Props> {
                         <CloseButton onClick={onClose} />
                     </div>
                     <div className={css.itemList}>
-                        <MenuItem label={'Educator'} href={'/'} />
-                        <MenuItem label={'Downloads'} href={'/'} />
-                        <MenuItem label={'Store Locator'} href={'/'} />
-                        <MenuItem label={'Blog'} href={'/'} />
-                        <HelpMenuItem label={'Help'} />
+                        {items.map(item => (
+                            <MenuItem label={item.label} href={item.href} />
+                        ))}
+                        <HelpMenuItem label={help.label} items={help.items} />
                     </div>
                 </div>
             </div>

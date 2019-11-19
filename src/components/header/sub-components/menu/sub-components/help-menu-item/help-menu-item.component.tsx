@@ -1,12 +1,13 @@
 import * as React from 'react';
-
-import css from './helpmenu-item.module.css';
 import cn from 'classnames';
 import { MenuItem } from '../menu-item/menu-item.component';
-import { HELP_ITEMS } from '../../../../header.component';
+import { Item } from '../../../../../page/page.model';
+
+import css from './helpmenu-item.module.css';
 
 export type Props = {
     label: string;
+    items: Item[];
 };
 
 type State = {
@@ -23,7 +24,7 @@ export class HelpMenuItem extends React.PureComponent<Props, State> {
     };
 
     render() {
-        const { label } = this.props;
+        const { label, items } = this.props;
         const { isActive } = this.state;
 
         const containerClassName = cn(css.container, {
@@ -56,7 +57,7 @@ export class HelpMenuItem extends React.PureComponent<Props, State> {
                     </svg>
                 </div>
                 <div className={subItemsClassName}>
-                    {HELP_ITEMS.map(item => (
+                    {items.map(item => (
                         <MenuItem
                             additionalPadding={40}
                             label={item.label}
