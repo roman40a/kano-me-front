@@ -5,6 +5,7 @@ import css from './header.module.css';
 import { Logo } from '../logo/logo.component';
 import { Cart } from '../cart/cart.component';
 import { PointerIcon } from '../icons/pointer/pointer';
+import { Item } from './sub-components/item/item.component';
 
 export type Props = {
     data?: any;
@@ -59,20 +60,12 @@ export class Header extends React.PureComponent<Props, State> {
                                         <PointerIcon active={isProjectsOpened} hovered={isProductHovered} />
                                     </a>
                                 </div>
-                                <a href='/' className={css.item}>
-                                    <span className={css.label}>Educators</span>
-                                </a>
-                                <a href='/' className={css.item}>
-                                    <span className={css.label}>DownLoads</span>
-                                </a>
+                                <Item label={'Educators'} href={'/'} />
+                                <Item label={'DownLoads'} href={'/'} />
                             </div>
                             <div className={css.secondary}>
-                                <a href='/' className={css.item}>
-                                    <span className={css.label}>Blog</span>
-                                </a>
-                                <a href='/' className={css.item}>
-                                    <span className={css.label}>Story Locator</span>
-                                </a>
+                                <Item label={'Blog'} href={'/'} />
+                                <Item label={'Story Locator'} href={'/'} />
                             </div>
                         </div>
                         <div className={css.auxiliary}>

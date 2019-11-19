@@ -1,0 +1,25 @@
+.container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    cursor: pointer;
+
+    color: #8e9397;
+    font-weight: 700;
+    text-decoration: none;
+
+    margin-right: 30px;
+}
+.container:hover {
+    color: #141414;
+}
+
+.container:visited {
+    box-shadow: none;
+    outline: none;
+}
+
+.content {
+
+}
