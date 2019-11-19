@@ -4,10 +4,10 @@ import cn from 'classnames';
 import css from './header.module.css';
 import { Logo } from '../logo/logo.component';
 import { Cart } from '../cart/cart.component';
-import { PointerIcon } from '../icons/pointer/pointer';
 import { Item } from './sub-components/item/item.component';
 import { ProductsItem } from './sub-components/products-item/products-item.component';
 import { HelpItem } from './sub-components/help-item/help-item.component';
+import { ShowCaseClose } from './sub-components/show-case-close/show-case-close';
 
 export type Props = {
     data?: any;
@@ -45,6 +45,10 @@ export class Header extends React.PureComponent<Props, State> {
 
     handleProductOpen = () => {
         this.setState(state => ({ isProjectsOpened: !state.isProjectsOpened }));
+    };
+
+    handleProductClose = () => {
+        this.setState({isProjectsOpened: false});
     };
 
     handleHelpOpen = () => {
@@ -92,7 +96,14 @@ export class Header extends React.PureComponent<Props, State> {
                     </div>
                 </div>
                 <div className={showCaseClassName}>
-                    showCase
+                    <div className={css.showCaseWrapper}>
+                        <div className={css.closeShowCase}>
+                            <ShowCaseClose onClose={this.handleProductClose} />
+                        </div>
+                        <div className={css.productList}>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         );

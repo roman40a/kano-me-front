@@ -1,0 +1,9 @@
+.container {
+    cursor: pointer;
+    height: 26px;
+    width: 26px;
+}
+
+.container path {
+    fill: #8e9397;
+}
