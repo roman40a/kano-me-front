@@ -10,6 +10,7 @@ import { Product } from './sub-components/product/product.component';
 
 import css from './header.module.css';
 import { BurgerButton } from './sub-components/burger-button/burger-button.component';
+import { Menu } from './sub-components/menu/menu.component';
 
 export type Props = {
     data?: any;
@@ -18,6 +19,7 @@ export type Props = {
 type State = {
     isProjectsOpened: boolean;
     isHelpOpened: boolean;
+    isMenuOpened: boolean;
 };
 
 const HELP_ITEMS = [
@@ -64,6 +66,7 @@ export class Header extends React.PureComponent<Props, State> {
     readonly state: State = {
         isProjectsOpened: false,
         isHelpOpened: false,
+        isMenuOpened: false,
     };
 
     handleProductOpen = () => {
@@ -78,8 +81,16 @@ export class Header extends React.PureComponent<Props, State> {
         this.setState(state => ({ isHelpOpened: !state.isHelpOpened }));
     };
 
+    handleMenuOpen = () => {
+        this.setState({isMenuOpened: true});
+    }
+
+    handleMenuClose = () => {
+        this.setState({isMenuOpened: false});
+    }
+
     render() {
-        const { isProjectsOpened, isHelpOpened } = this.state;
+        const { isProjectsOpened, isHelpOpened, isMenuOpened } = this.state;
 
         const showCaseClassName = cn(css.showCase, {
             [css.showCase__open]: isProjectsOpened,
@@ -87,14 +98,17 @@ export class Header extends React.PureComponent<Props, State> {
 
         return (
             <div className={css.container}>
+                <Menu isOpened={isMenuOpened} onClose={this.handleMenuClose} />
                 <div className={css.content}>
-                    <BurgerButton onClick={() => console.log('click')} />
-                    <a
-                        href={'https://kano.me/row'}
-                        className={css.logoContainer}
-                    >
-                        <Logo />
-                    </a>
+                    <BurgerButton onClick={this.handleMenuOpen} />
+                    <div className={css.logoContainer}>
+                        <a
+                            href={'https://kano.me/row'}
+                            className={css.logoLink}
+                        >
+                            <Logo />
+                        </a>
+                    </div>
                     <div className={css.main}>
                         <div className={css.mainContainer}>
                             <div className={css.primary}>
