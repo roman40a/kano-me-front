@@ -19,4 +19,9 @@
     margin: auto;
     max-width: 87.5rem;
     transition: .3s ease;
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
 }

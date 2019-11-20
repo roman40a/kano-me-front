@@ -12,6 +12,8 @@ import { Menu } from './sub-components/menu/menu.component';
 import { HeaderData, Position } from '../page/page.model';
 
 import css from './header.module.css';
+import { Button } from '../button/button.component';
+import { ColorTheme } from '../button/button.model';
 
 export type Props = {
     data: HeaderData;
@@ -143,9 +145,11 @@ export class Header extends React.PureComponent<Props, State> {
                             ))}
                         </div>
                         <div className={css.viewAllButtonContainer}>
-                            <a href={'/'} className={css.viewAllButton}>
-                                view all products
-                            </a>
+                            <Button
+                                title="view all products"
+                                href="/"
+                                colorTheme={ColorTheme.black}
+                            />
                         </div>
                     </div>
                 </div>
