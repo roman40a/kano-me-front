@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "672f5e925d981220a4af2bd71e08bf0c",
+    "revision": "661a5ae2adb73326b65a73c3f46ac80a",
     "url": "/kano-me-front/index.html"
   },
   {
-    "revision": "3a09e1b994811afa1e3e",
-    "url": "/kano-me-front/static/css/main.7de13183.chunk.css"
+    "revision": "daac1384030cf8a51fda",
+    "url": "/kano-me-front/static/css/main.4c763150.chunk.css"
   },
   {
-    "revision": "976245c792de3a60f491",
-    "url": "/kano-me-front/static/js/2.dbce40fd.chunk.js"
+    "revision": "466711acc717ea55b9e3",
+    "url": "/kano-me-front/static/js/2.dc905fda.chunk.js"
   },
   {
-    "revision": "3a09e1b994811afa1e3e",
-    "url": "/kano-me-front/static/js/main.45e4ea87.chunk.js"
+    "revision": "daac1384030cf8a51fda",
+    "url": "/kano-me-front/static/js/main.0409b39b.chunk.js"
   },
   {
     "revision": "891995ebb24b81770e96",
