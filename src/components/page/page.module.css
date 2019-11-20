@@ -25,3 +25,16 @@
     overflow: hidden;
     width: 100%;
 }
+
+.quoteWrapper {
+    margin: 32px 24px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 981px) {
+    .quoteWrapper {
+        margin-top: 60px;
+    }
+}
