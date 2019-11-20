@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/kano-me-front/precache-manifest.6357779eff08292f8d084697daac2aeb.js"
+  "/kano-me-front/precache-manifest.126ef93d1b08f5a69120ab47aae2752e.js"
 );
 
 self.addEventListener('message', (event) => {
