@@ -3,6 +3,8 @@ import { Header } from '../header/header.component';
 import { HeaderData } from './page.model';
 import { ContentHeader } from '../content-header/content-header.component';
 import { Quote } from '../quote/quote.component';
+import { Main } from '../main/main.component';
+import { MainType } from '../main/main.module';
 
 import css from './page.module.css';
 
@@ -28,6 +30,26 @@ export class Page extends React.PureComponent<Props> {
                             title="Unshackles us from the past and ushers in a new world of computing."
                             person="Fast Company"
                             extra="The World's Most Innovative Companies 2019"
+                        />
+                    </div>
+                    <div className={css.mainWrapper1}>
+                        <Main
+                            imgSrc="https://kanome-cms-media-production.kano.me/media/components/cfe942a0-df00-4be7-8587-56899f223da8.jpeg?v=14bf7d202899e6d796d6f8de11c90b1135e2853a"
+                            title="Make computers"
+                            text="Anyone can build and code technology, with a step-by-step book. Connect the bits, boards, and buttons. Bring computers, tablets, wands, sensors, and more to life. Simple, fun, and for everyone."
+                            btnTitle="SHOP ALL KITS"
+                            btnHref="/"
+                            type={MainType.Left}
+                        />
+                    </div>
+                    <div className={css.mainWrapper2}>
+                        <Main
+                            imgSrc="https://kanome-cms-media-production.kano.me/media/components/72eb6cee-d7cb-4527-b1f1-52a9e6a36676.jpeg?v=14bf7d202899e6d796d6f8de11c90b1135e2853a"
+                            title="Learn real code"
+                            text="Go from beginner to code master with step-by-step challenges, and stories. Drag blocks, type code, unlock programming powers. Projects with Python, JavaScript, Unix, and more."
+                            btnTitle="SHOP KANO"
+                            btnHref="/"
+                            type={MainType.Right}
                         />
                     </div>
                     <div className={css.quoteWrapper}>

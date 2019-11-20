@@ -33,6 +33,23 @@
     align-items: center;
 }
 
+.mainWrapper1 {
+    margin-bottom: 32px;
+    padding: 0 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainWrapper2 {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 0 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media (min-width: 981px) {
     .quoteWrapper {
         margin-top: 60px;
