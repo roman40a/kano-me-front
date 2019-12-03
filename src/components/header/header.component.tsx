@@ -94,6 +94,7 @@ export class Header extends React.PureComponent<Props, State> {
                                     )
                                     .map(item => (
                                         <Item
+                                            key={item.label}
                                             label={item.label}
                                             href={item.href}
                                         />
@@ -107,6 +108,7 @@ export class Header extends React.PureComponent<Props, State> {
                                     )
                                     .map(item => (
                                         <Item
+                                            key={item.label}
                                             label={item.label}
                                             href={item.href}
                                         />
@@ -137,6 +139,7 @@ export class Header extends React.PureComponent<Props, State> {
                         <div className={css.productList}>
                             {products.products.map(product => (
                                 <Product
+                                    key={product.title}
                                     title={product.title}
                                     price={product.price}
                                     imgSrc={product.imgSrc}

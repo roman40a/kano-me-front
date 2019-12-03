@@ -59,6 +59,7 @@ export class OpeningMenuItem extends React.PureComponent<Props, State> {
                 <div className={subItemsClassName}>
                     {items.map(item => (
                         <MenuItem
+                            key={item.label}
                             additionalPadding={40}
                             label={item.label}
                             href={item.href}

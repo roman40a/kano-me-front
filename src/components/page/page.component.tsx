@@ -7,6 +7,7 @@ import { Main } from '../main/main.component';
 import { MainType } from '../main/main.module';
 
 import css from './page.module.css';
+import { CommunityShowcase } from '../community-showcase/community-showcase.component';
 
 type Props = {
     headerData: HeaderData;
@@ -58,6 +59,9 @@ export class Page extends React.PureComponent<Props> {
                             title="What he's doing, though he doesn't know it, is coding. He can do this because Kano has made it instinctive."
                             person="The Guardian, “How Kano turned my son, 8, into a programmer”"
                         />
+                    </div>
+                    <div className={css.communityShowcaseWrapper}>
+                        <CommunityShowcase />
                     </div>
                 </div>
             </div>

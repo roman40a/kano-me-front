@@ -34,7 +34,7 @@ export class HelpItem extends React.PureComponent<Props> {
                 />
                 <div className={contentClassName}>
                     {items.map(item => (
-                        <div className={css.itemContainer}>
+                        <div key={item.label} className={css.itemContainer}>
                             <Item label={item.label} href={item.href} />
                         </div>
                     ))}

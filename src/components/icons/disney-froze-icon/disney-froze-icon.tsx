@@ -30,10 +30,10 @@ export class DisneyFrozeIcon extends React.PureComponent<Props> {
                     <desc>Created with Sketch.</desc>
                     <g
                         fill="none"
-                        fill-rule="evenodd"
+                        fillRule="evenodd"
                         id="Landing"
                         stroke="none"
-                        stroke-width="1"
+                        strokeWidth="1"
                     >
                         <g
                             fill="#FFFFFF"

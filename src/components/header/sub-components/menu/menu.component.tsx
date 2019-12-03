@@ -49,7 +49,11 @@ export class Menu extends React.PureComponent<Props> {
                             items={parsedProductItems}
                         />
                         {items.map(item => (
-                            <MenuItem label={item.label} href={item.href} />
+                            <MenuItem
+                                key={item.label}
+                                label={item.label}
+                                href={item.href}
+                            />
                         ))}
                         <OpeningMenuItem
                             label={help.label}
